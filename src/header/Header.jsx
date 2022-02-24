@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
     return (
-        <div className="generalSpace">
+        <div className="generalContainerHeader">
             <ul className="containerMenu">
                 <Link to="/Home">
                     <li className='bttnTop'>
@@ -19,7 +19,11 @@ function Header() {
                         UI/UX
                     </li>
                 </Link>
-                <li className="logo"><img src='logo.png' alt="logo" /></li>
+                <Link to="/Home">
+                    <li id="imageLogo" >
+                        <img src={logo} alt="logo" />
+                    </li>
+                </Link>
                 <Link to="/Art">
                     <li className='bttnTop'>
                         Art

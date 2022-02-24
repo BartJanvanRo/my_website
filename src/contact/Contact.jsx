@@ -2,7 +2,9 @@ import React from 'react'
 
 function Contact() {
     return (
-        <div>Contact</div>
+        <div className="generalContainerBody">
+            <div className="container">Contact</div>
+        </div>
     )
 }
 

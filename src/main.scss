@@ -31,17 +31,11 @@ $font-weights: (
 body {
   background-color: $bgColor;
   font-family: $myfont;
-  color: $textColor;
 }
 
 @mixin myh1 {
   font-size: 16px;
-  font-weight: weight(bold);
-  list-style-type: none;
-  text-decoration: none;
-}
-
-.bttnTop {
+  font-weight: weight(regular);
 }
 
 h2 {
@@ -65,35 +59,82 @@ p {
   }
 } */
 
-.generalSpace {
+.generalContainerHeader {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-decoration: none;
-  background-color: $sub_bgColor1;
 
   ul {
-    background-color: rgb(129, 128, 167);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 90.6%;
     height: 269px;
-    background: $bgColor;
+  }
 
-    li {
-      margin-top: 15%;
-      width: 174px;
-      height: 75px;
-      text-align: center;
-      /* Line 1 */
-      border-left: 3px #000000;
-      border-right: 3px #000000 !important;
-    }
+  li {
+    box-sizing: border-box;
+    margin-top: 15%;
+    padding-top: 12%;
+    width: 174px;
+    height: 75px;
+    text-align: center;
+    color: $textColor;
 
-    a {
-      text-decoration: none;
+    list-style-type: none;
+    text-decoration: none;
+    border-left: 2px solid $textColor;
+    border-right: 2px solid $textColor;
+
+    &:hover {
+      background-color: $bttnColor;
     }
-    @include myh1;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @include myh1;
+}
+
+#imageLogo {
+  padding-top: 0%;
+  max-width: 100%;
+  height: auto;
+  background-color: $bgColor !important;
+  border-left: 5px solid $bgColor;
+  border-right: 5px solid $bgColor;
+  width: 174px;
+  height: 75px;
+  li {
+    background-color: $bgColor !important;
+  }
+  a {
+    background-color: $bgColor !important;
+  }
+}
+
+.bttnTop {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 200%;
+}
+
+.generalContainerBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+
+  .container {
+    width: 90.6%;
+    background-color: $sub_bgColor1;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
