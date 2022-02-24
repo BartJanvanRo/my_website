@@ -1,0 +1,99 @@
+// colors
+$bgColor: #e1e1e1;
+$sub_bgColor1: #f0f0f0;
+$sub_bgColor2: #e1d991;
+$sub_bgColor3: #ddaaaa;
+$sub_bgColor4: #a8bbe1;
+$textColor: #000000;
+$bttnColor: #7295e2;
+
+//text / fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Spinnaker&display=swap");
+
+$myfont: "Roboto", sans-serif;
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+// styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bgColor;
+  font-family: $myfont;
+  color: $textColor;
+}
+
+@mixin myh1 {
+  font-size: 16px;
+  font-weight: weight(bold);
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.bttnTop {
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: weight(bold);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: weight(bold);
+}
+
+p {
+  font-size: 16px;
+  font-weight: weight(regular);
+}
+
+/* @mixin mobile {
+  @media (max-width: 800px) {
+    @content; hier nog columm schrijven en topmenu hamburger maken. 
+  }
+} */
+
+.generalSpace {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  background-color: $sub_bgColor1;
+
+  ul {
+    background-color: rgb(129, 128, 167);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90.6%;
+    height: 269px;
+    background: $bgColor;
+
+    li {
+      margin-top: 15%;
+      width: 174px;
+      height: 75px;
+      text-align: center;
+      /* Line 1 */
+      border-left: 3px #000000;
+      border-right: 3px #000000 !important;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    @include myh1;
+  }
+}
