@@ -1,1 +1,99 @@
+@mixin flexGeneral {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+}
 
+@mixin scaleContent {
+  width: 90.6%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.generalContainerHeader {
+  @include flexGeneral;
+
+  ul {
+    @include scaleContent;
+    justify-content: space-between;
+  }
+
+  li {
+    box-sizing: border-box;
+    margin-top: 15%;
+    margin-bottom: 20%;
+    position: relative;
+    padding-top: 12%;
+    width: 174px;
+    height: 75px;
+    text-align: center;
+    color: $textColor;
+
+    list-style-type: none;
+    text-decoration: none;
+    border-left: 2px solid $textColor;
+    border-right: 2px solid $textColor;
+
+    &:hover {
+      background-color: $bttnColor;
+    }
+
+    .underline {
+      width: 90px;
+      height: 4px;
+      background-color: $bttnColor;
+
+      display: block;
+      position: absolute;
+      left: 25%;
+      margin: 9% 0%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @include myh1();
+}
+
+#imageLogo {
+  padding-top: 0%;
+  max-width: 100%;
+  height: auto;
+  background-color: $bgColor !important;
+  border-left: 5px solid $bgColor;
+  border-right: 5px solid $bgColor;
+  width: 174px;
+  height: 75px;
+  li {
+    background-color: $bgColor !important;
+  }
+  a {
+    background-color: $bgColor !important;
+  }
+}
+
+.bttnTop {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 200%;
+  z-index: -1;
+}
+
+.generalContainerBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+
+  .container {
+    width: 90.6%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

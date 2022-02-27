@@ -1,22 +1,46 @@
-import React from 'react'
-import '/Users/bart-janvanrossum/Desktop/my_website/src/css/main.min.css';
+import React, { useEffect } from 'react'
+import '../main.scss';
+
 import logo from './logo.png';
 /* import './header.css'; */
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+
+    const location = useLocation().pathname.split('/')[1]
+    console.log(location)
+    useEffect(() => {
+        const links = document.querySelectorAll('.bttnTop')
+
+        const span = document.createElement('span')
+        span.className = 'underline'
+
+        links.forEach((i) => {
+            i.onclick = () => {
+
+                document.querySelector('.home span').classList.remove('underline')
+                i.appendChild(span)
+
+            }
+
+        })
+    },
+        [])
+
     return (
         <div className="generalContainerHeader">
             <ul className="containerMenu">
                 <Link to="/Home">
-                    <li className='bttnTop'>
+                    <li className='bttnTop home'>
                         Home
+                        <span className='underline'></span>
                     </li>
                 </Link>
                 <Link to="/UI">
                     <li className='bttnTop'>
                         UI/UX
+
                     </li>
                 </Link>
                 <Link to="/Home">
@@ -27,11 +51,13 @@ function Header() {
                 <Link to="/Art">
                     <li className='bttnTop'>
                         Art
+
                     </li>
                 </Link>
                 <Link to="/Contact">
                     <li className='bttnTop'>
                         Contact
+
                     </li>
                 </Link>
             </ul>
