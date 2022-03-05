@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function UI() {
     return (
@@ -11,11 +11,10 @@ function UI() {
                     test left
                 </div>
                 <div className="bottomRight">
-                    test right
+                    <h3>test right</h3>
+                    andere test
                 </div>
             </div>
-
-
         </div>
     )
 }

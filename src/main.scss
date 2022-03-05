@@ -30,6 +30,12 @@ body {
     @content; hier nog columm schrijven en topmenu hamburger maken. 
   }
 } */
+@mixin flexGeneral {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+}
 
 @import "./header/header";
-@import "./UI/ui";
+@import "./content";

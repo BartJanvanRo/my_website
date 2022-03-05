@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import '../main.scss';
+import Hamburger from './Hamburger';
 
-import logo from './logo.png';
+import logo from '../img/logo.png';
 /* import './header.css'; */
 
 import { Link, useLocation } from "react-router-dom";
@@ -9,7 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 function Header() {
 
     const location = useLocation().pathname.split('/')[1]
-    console.log(location)
+    //  console.log(location)
     useEffect(() => {
         const links = document.querySelectorAll('.bttnTop')
 
@@ -29,7 +30,9 @@ function Header() {
         [])
 
     return (
-        <div className="generalContainerHeader">
+
+        <div className="generalContainerHeader" >
+
             <ul className="containerMenu">
                 <Link to="/Home">
                     <li className='bttnTop home'>
@@ -61,6 +64,7 @@ function Header() {
                     </li>
                 </Link>
             </ul>
+
         </div>
     )
 }
