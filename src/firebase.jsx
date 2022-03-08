@@ -5,6 +5,23 @@ import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
 
+    // apiKey: "process.env.REACT_APP_FIREBASE_APIKEY",
+
+    //    authDomain: "process.env.REACT_APP_FIREBASE_AUTHDOMAIN",
+
+    //  projectId: "process.env.REACT_APP_FIREBASE_PROJECTID",
+
+    //storageBucket: "process.env.REACT_APP_FIREBASE_STORAGEBUCKET",
+
+    //messagingSenderId: "process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID",
+
+    //appId: "process.env.REACT_APP_FIREBASE_APPID",
+
+    //    measurementId: "process.env.REACT_APP_FIREBASE_MEASUREMENTID",
+
+
+
+
     apiKey: "AIzaSyBIxVrygb_eEkDygtq55WjxYUrITUdhlxY",
 
     authDomain: "mywebsite-5d12a.firebaseapp.com",
@@ -17,7 +34,7 @@ const firebaseConfig = {
 
     appId: "1:824156375055:web:566242b3fbdec20e54bb7a",
 
-    measurementId: "G-1DC52PKMPD"
+    measurementId: "G-1DC52PKMPD",
 
 
 };

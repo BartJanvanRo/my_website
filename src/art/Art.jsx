@@ -4,11 +4,17 @@ import arrow from '../img/button/arrowBttnVerti.svg'
 import { db } from '../firebase';
 import { collection, doc, getDocs } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { Link } from "react-router-dom"
+
 
 
 // nog na te vragen, afbeeldingen via show images by firebase.
 // sync database met sjabloon = verschillende webpagina's
 function Art() {
+
+    // const path = Link
+    // console.log(path)
+
     const [content, setContent] = useState([]);
     const contentcollection = collection(db, 'content')
 
@@ -18,31 +24,46 @@ function Art() {
         const getContent = async () => {
             const data = await getDocs(contentcollection);
             setContent(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+
         }
+
+
         getContent();
-        console.log(getContent)
+
+        const idCheck = content.map(e => {
+            return e.id
+        })
+
+
+        document.title = "Art.jsx"
+        console.log(document.title)
 
     }, [])
-
 
 
     return (
         <div className="generalContainerBody">
             {""}
             {content.map((icontent) => {
+
                 return (
                     <div className="container">
                         <div className="top_title">
                             {icontent.title}
+
                         </div>
                         <div className="flexContainer">
                             <div className="bottomLeft">
-                                <img src={icontent.image} alt="My Drawing" />
+                                <img src={icontent.image1} alt="My Drawing" />
                             </div>
                             <div className="bottomRight">
-                                <h2>{icontent.subTitle}</h2>
+                                <h3>{icontent.subTitle}</h3>
                                 <br />
                                 {icontent.text}
+                                <br />
+                                <img src={icontent.image2} alt="zichtbaar?" />
+
+
                             </div>
                             {/*     <div className="rightBttm">
 

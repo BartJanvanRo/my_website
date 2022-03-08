@@ -17,6 +17,7 @@ function App() {
       <Header />
       {/*       <Hamburger />
   */}      <Routes>
+        <Route exact path='/' element={<Home />} />
         <Route path='/Home' element={<Home />} />
         <Route path='/UI' element={<UI />} />
         <Route path='/Art' element={<Art />} />

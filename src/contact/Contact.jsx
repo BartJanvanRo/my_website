@@ -17,7 +17,6 @@ function Contact() {
             setContent(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         }
         getContent();
-        console.log(getContent)
 
     }, [])
 

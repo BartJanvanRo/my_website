@@ -1,21 +1,18 @@
 
+import Template2 from '../Template2';
+
+
 
 function UI() {
+
+    document.title = "UI_UX"
+
+
+    // if id is UI, return this page met die inhoud. else niets. of misschien knoppen voor de andere projecten.
+
     return (
-        <div className="generalContainerBody">
-            <div className="container">
-                <div className="top_title">
-                    UI/UX
-                </div>
-                <div className="bottomLeft">
-                    test left
-                </div>
-                <div className="bottomRight">
-                    <h3>test right</h3>
-                    andere test
-                </div>
-            </div>
-        </div>
+        <Template2 />
+
     )
 }
 
